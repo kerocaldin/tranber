@@ -1,0 +1,22 @@
+{
+    "name": "my-project",
+    "dependencies": {
+        "jquery": "*"
+    },
+    "devDependencies": {
+        "@babel/core": "*",
+        "@babel/preset-env": "*",
+        "babelify": "*",
+        "browserify": "*",
+        "factor-bundle": "*",
+        "gulp": "*",
+        "gulp-autoprefixer": "*",
+        "gulp-clean-css": "*",
+        "gulp-image": "*",
+        "gulp-livereload": "*",
+        "gulp-sass": "*",
+        "gulp-sourcemaps": "*",
+        "uglifyify": "*",
+        "vinyl-source-stream": "*"
+    }
+}

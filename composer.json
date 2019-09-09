@@ -1,0 +1,9 @@
+{
+	"name":"tranber/tranber",
+	"description":"Framework Web PHP",
+    "autoload": {
+        "psr-4": {
+        	"tranber\\": "src/php"
+        }
+    }
+}	
