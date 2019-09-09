@@ -3,6 +3,7 @@
 namespace tranber\services;
 
 use tranber\structures\Service;
+use tranber\functions as fn;
 
 class Database extends Service implements DatabaseInterface
 {
@@ -17,7 +18,12 @@ class Database extends Service implements DatabaseInterface
 		$user   = $dbConf['user']   ?? 'root';
 		$pass   = $dbConf['pass']   ?? '';
 
-		$this->pdo = new \PDO('mysql:host='.$host.';dbname='.$name, $user, $pass);
+		try {
+			$this->pdo = new \PDO('mysql:host='.$host.';dbname='.$name, $user, $pass);
+		}
+		catch(\Throwable $e) {
+			echo fn\htmlErrorFromException($e);
+		}
 	}
 
 	public static function getInstance(ConfInterface $conf)
@@ -35,7 +41,8 @@ class Database extends Service implements DatabaseInterface
 			return $fetch ? $statement->fetchAll(\PDO::FETCH_ASSOC) : $result;
 		}
 		catch(Exception $e) {
-			echo $e->getMessage().' in '.$e->getFile().', l.'.$e->getLine();
+			echo fn\htmlErrorFromException($e);
+			// echo $e->getMessage().' in '.$e->getFile().', l.'.$e->getLine();
 			die;
 		}
 	}

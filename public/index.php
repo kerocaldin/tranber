@@ -8,13 +8,13 @@ use tranber\services\App;
 include '../vendor/autoload.php';
 
 $data = [
-	'site-url' => 'http://localhost/tranber/public/',
+	'site-url' => 'http://localhost/tranber-2/public/',
 	'routes'   => [
 		'/'       => 'tranber\controllers\Home',
 		'sign-up' => 'tranber\controllers\SignUp',
 	],
 	'database' => [
-		'name' => 'tranber',
+		'name' => 'tranberrrr',
 		'user' => 'root',
 		'pass' => '',
 		'host' => 'localhost',
