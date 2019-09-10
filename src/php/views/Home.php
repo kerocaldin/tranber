@@ -8,6 +8,8 @@ class Home extends View
 {
 	public function __construct()
 	{
+		$this->setTemplate('HtmlHeader');
 		$this->setTemplate('Home');
+		$this->setTemplate('HtmlFooter');
 	}
 }
