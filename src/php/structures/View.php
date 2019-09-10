@@ -9,25 +9,25 @@ use tranber\functions as fn;
 
 abstract class View implements ViewInterface
 {
-	protected $template;
+	protected $templates = [];
 
-	protected function getTemplate() :?string
+	protected function getTemplates() :?iterable
 	{
-		return $this->template;
+		return $this->templates;
 	}
 
-	protected function setTemplate(string $template) :ViewInterface
+	protected function setTemplate(string $name, iterable $vars = []) :ViewInterface
 	{
-		$this->template = $template;
+		$this->templates[$name] = $vars;
 		return $this;
 	}
 
 	public function stringify() 
 	{
-		if ($template = $this->getTemplate())
+		foreach ($this->getTemplates() as $name => $vars)
 		{
-			$path = '../src/php/templates/'.$template.'.php';
-			echo fn\parseTemplate($path);
+			$path = '../src/php/templates/'.$name.'.php';
+			echo fn\parseTemplate($path, $vars);
 		}
 	}
 
