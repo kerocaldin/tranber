@@ -2,6 +2,8 @@
 
 namespace tranber\structures;
 
+use tranber\functions as fn;
+
 // "abstract" rend impossible l'instanciation de la classe
 // cette classe est donc faite pour être héritée
 
@@ -25,10 +27,7 @@ abstract class View implements ViewInterface
 		if ($template = $this->getTemplate())
 		{
 			$path = '../src/php/templates/'.$template.'.php';
-			if (is_file($path))
-			{
-				include $path;
-			}
+			echo fn\parseTemplate($path);
 		}
 	}
 
