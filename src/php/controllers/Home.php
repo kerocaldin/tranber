@@ -3,11 +3,13 @@
 namespace tranber\controllers;
 
 use tranber\structures\Controller;
+use tranber\views\Home as HomeView;
 
 class Home extends Controller implements HomeInterface
 {
 	public function run()
 	{
-		echo 'Homepage';
+		$view = new HomeView;
+		$view->stringify();
 	}
 }
