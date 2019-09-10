@@ -6,7 +6,8 @@
         	"tranber\\": "src/php"
         },
         "files": [
-        	"src/php/functions/errors.php"
+        	"src/php/functions/errors.php",
+            "src/php/functions/templates.php"
         ]
     }
 }	
