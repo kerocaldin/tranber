@@ -3,11 +3,13 @@
 namespace tranber\controllers;
 
 use tranber\structures\Controller;
+use tranber\views\NotFound as NotFoundView;
 
 class NotFound extends Controller implements NotFoundInterface
 {
 	public function run()
 	{
-		echo 'Not Found';
+		$view = new NotFoundView;
+		$view->stringify();
 	}	
 }
