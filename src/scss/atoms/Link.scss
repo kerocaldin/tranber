@@ -1,0 +1,18 @@
+.atm_Link,
+.atm_Link:link {
+	color : $linkColor;
+}
+
+.atm_Link:visited {
+	color : $visitedLinkColor;
+}
+
+.atm_Link:focus, 
+.atm_Link:focus-within,
+.atm_Link:hover {
+	color : $focusLinkColor;
+}
+
+.atm_Link:active {
+	color : $activeLinkColor;
+}

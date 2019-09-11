@@ -1,0 +1,25 @@
+.atm_Link-navbar {
+	display         : flex;
+	align-items     : center;
+	height          : 100%;
+	padding         : .25em .5em;
+	text-decoration : none;
+}
+
+.atm_Link-navbar,
+.atm_Link-navbar:link, 
+.atm_Link-navbar:visited {
+	color : $navbarLinkColor;
+}
+
+.atm_Link-navbar:focus, 
+.atm_Link-navbar:focus-within,
+.atm_Link-navbar:hover {
+	color            : $navbarLinkColor;
+	background-color : $focusLinkColor;
+}
+
+.atm_Link-navbar:active {
+	color            : $navbarLinkColor;
+	background-color : $activeLinkColor;
+}

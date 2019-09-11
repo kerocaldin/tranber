@@ -1,6 +1,14 @@
+@import '../settings/colors.scss';
 @import '../base/all.scss';
 @import '../base/html.scss';
 @import '../base/body.scss';
-@import '../blocks/Error.scss';
+@import '../atoms/Link.scss';
+@import '../atoms/Link-navbar.scss';
+@import '../atoms/Title-navbar.scss';
 @import '../elements/Error_File.scss';
 @import '../elements/Error_Message.scss';
+@import '../elements/Menu_Item-navbar.scss';
+@import '../blocks/Error.scss';
+@import '../blocks/Menu.scss';
+@import '../blocks/Menu-navbar.scss';
+@import '../blocks/Navbar.scss';
