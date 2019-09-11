@@ -27,6 +27,7 @@ abstract class View implements ViewInterface
 	{
 		$confData    = Conf::getInstance()->getData();
 		$defaultVars = [
+			'title'   => $confData['title']    ?? 'Tranber',
 			'siteUrl' => $confData['site-url'] ?? '',
 		];
 
