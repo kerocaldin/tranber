@@ -8,6 +8,7 @@ use tranber\services\App;
 include '../vendor/autoload.php';
 
 $data = [
+	'title'    => 'Tranber',
 	'site-url' => 'http://localhost/tranber-2/public/',
 	'routes'   => [
 		'/'       => 'tranber\controllers\Home',
