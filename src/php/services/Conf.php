@@ -8,7 +8,7 @@ class Conf extends Service implements ConfInterface
 {
 	protected $data = [];
 
-	public static function getInstance(array $data)
+	public static function getInstance(array $data = [])
 	{
 		return self::getSingletonInstance(self::class, [$data]);
 	}
