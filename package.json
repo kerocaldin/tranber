@@ -9,7 +9,7 @@
         "babelify": "*",
         "browserify": "*",
         "factor-bundle": "*",
-        "gulp": "*",
+        "gulp": "^4.0.2",
         "gulp-autoprefixer": "*",
         "gulp-clean-css": "*",
         "gulp-image": "*",

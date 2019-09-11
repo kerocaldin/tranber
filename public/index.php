@@ -9,13 +9,14 @@ include '../vendor/autoload.php';
 
 $data = [
 	'title'    => 'Tranber',
-	'site-url' => 'http://localhost/tranber-2/public/',
+	'site-url' => 'http://localhost/tranber2/public/',
 	'routes'   => [
 		'/'       => 'tranber\controllers\Home',
 		'sign-up' => 'tranber\controllers\SignUp',
+		'sign-in' => 'tranber\controllers\SignIn'
 	],
 	'database' => [
-		'name' => 'tranberrrr',
+		'name' => 'tranber',
 		'user' => 'root',
 		'pass' => '',
 		'host' => 'localhost',
