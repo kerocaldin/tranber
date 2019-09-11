@@ -2,6 +2,7 @@
 
 namespace tranber\structures;
 
+use tranber\services\Conf;
 use tranber\functions as fn;
 
 // "abstract" rend impossible l'instanciation de la classe
@@ -24,8 +25,14 @@ abstract class View implements ViewInterface
 
 	public function stringify() 
 	{
+		$confData    = Conf::getInstance()->getData();
+		$defaultVars = [
+			'siteUrl' => $confData['site-url'] ?? '',
+		];
+
 		foreach ($this->getTemplates() as $name => $vars)
 		{
+			$vars = \array_merge($defaultVars, $vars);
 			$path = '../src/php/templates/'.$name.'.php';
 			echo fn\parseTemplate($path, $vars);
 		}
