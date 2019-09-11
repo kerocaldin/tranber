@@ -9,6 +9,7 @@ class Home extends View
 	public function __construct()
 	{
 		$this->setTemplate('HtmlHeader');
+		$this->setTemplate('Navbar');
 		$this->setTemplate('Home');
 		$this->setTemplate('HtmlFooter');
 	}
